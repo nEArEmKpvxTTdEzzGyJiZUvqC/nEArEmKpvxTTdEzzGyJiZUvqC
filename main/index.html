@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Квиток</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="restart" id="restart"></div>
+  <div class="ticket-wrapper">
+    <div class="ticket-container">
+      <div class="top-cutout"></div>
+      <img src="images/logo.png" alt="Logo" class="logo" />
+      <div class="header">Миколаївелектротранс Тролейбус</div>
+      <div class="thin-line"></div>
+      <div class="purchase-info" id="purchase-info"></div>
+      <div class="ticket-info">
+        <span id="ticket-count">1</span> квиток
+      </div>
+      <div class="timer-container">
+        <svg id="timerCircle" width="28" height="28" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" stroke="#008000" stroke-width="1.5" fill="none"></circle>
+        </svg>
+        <div class="timer">Квиток дійсний – <span id="timer"></span></div>
+      </div>
+      <div class="dotted-line">
+      </div>
+      <img src="images/qr-code.png" alt="QR Code" class="qr-code" />
+      <div class="footer">Номер: <span id="ticket-number">286&nbsp;542</span></div>
+    </div>
+  </div>
+
+  <div id = "reset-div" class="reopen-message">Ви зможете повторно відкрити цю<br>сторінку через історію браузера</div>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
