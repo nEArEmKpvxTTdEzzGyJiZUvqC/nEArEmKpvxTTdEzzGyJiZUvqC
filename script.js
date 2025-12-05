@@ -87,6 +87,9 @@ window.onload = function () {
         }
     }
     startTimer(timeLeft, display);
+    setTimeout(function() {
+    document.getElementById("load").remove();
+    }, 1000);
     document.getElementById('restart').addEventListener('dblclick', function () {
     if (confirm("?")) {
         localStorage.removeItem('ticketNumber');
@@ -98,6 +101,7 @@ window.onload = function () {
 
 
 };
+
 
 
 
