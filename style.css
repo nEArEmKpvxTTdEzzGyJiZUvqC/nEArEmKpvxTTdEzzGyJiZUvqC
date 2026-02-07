@@ -5,7 +5,7 @@ body {
   padding: 0 20px;
   margin: 0;
   align-items: center;
-	user-select: none;
+  user-select: none;
 	display: flex;
 	flex-direction: column;
 }
@@ -109,7 +109,7 @@ transform: rotate(360deg);
   min-width: 15%;
   aspect-ratio: 1 / 1;
   top: 1%;
-  right:5%;
+  left:5%;
   z-index: 7;
 }
 .ticket-wrapper {
@@ -122,41 +122,321 @@ transform: rotate(360deg);
 .ticket-container {
   position: relative;
   background-color: white;
-  border-radius: 20px;
-  padding: 30px 20px 65px 20px;
+  border-radius: 16px;
+  padding: 32px 15px 60px 15px;
   overflow: visible;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 2;
-      display: -webkit-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  border-radius: 16px;
+  background: #FFF;
+  margin-top: 36px;
+  position: relative;
+  --size: 13px;
+  --p: 8px;
+  --R: 15px;
+  --ticket-bg-color: #fff;
+  --webkit-mask: radial-gradient(var(--R) at 50% -webkit-calc(100% - (var(--size) + var(--p))), var(--ticket-bg-color) 99%, #0000 101%) -webkit-calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%, radial-gradient(var(--R) at 50% -webkit-calc(100% + var(--p)),transparent 99%,var(--ticket-bg-color) 101%) 50% -webkit-calc(100% - var(--size))/calc(4*var(--size)) 100% repeat-x;
+  --webkit-mask: radial-gradient(var(--R) at 50% calc(100% - (var(--size) + var(--p))), var(--ticket-bg-color) 99%, #0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%, radial-gradient(var(--R) at 50% calc(100% + var(--p)),transparent 99%,var(--ticket-bg-color) 101%) 50% calc(100% - var(--size))/calc(4*var(--size)) 100% repeat-x;
+  background: var(--webkit-mask);
+}
+
+
+
+
+
+
+
+
+
+
+
+p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+
+
+
+strong{
+  font-size: 12px;
+  font-weight: 400;
+}
+
+
+
+
+.details {
+    width: 100%;
+    background: #F5F5F5;
+    padding: 32px 0;
+    text-align:left;
+}
+.details-container {
+    display: -webkit-box;
     display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-    border-radius: 16px;
-    background: #FFF;
-    margin-top: 36px;
-    position: relative;
-    --size: 13px;
-    --p: 8px;
-    --R: 15px;
-    --ticket-bg-color: #fff;
-    --webkit-mask: radial-gradient(var(--R) at 50% -webkit-calc(100% - (var(--size) + var(--p))), var(--ticket-bg-color) 99%, #0000 101%) -webkit-calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%, radial-gradient(var(--R) at 50% -webkit-calc(100% + var(--p)),transparent 99%,var(--ticket-bg-color) 101%) 50% -webkit-calc(100% - var(--size))/calc(4*var(--size)) 100% repeat-x;
-    --webkit-mask: radial-gradient(var(--R) at 50% calc(100% - (var(--size) + var(--p))), var(--ticket-bg-color) 99%, #0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%, radial-gradient(var(--R) at 50% calc(100% + var(--p)),transparent 99%,var(--ticket-bg-color) 101%) 50% calc(100% - var(--size))/calc(4*var(--size)) 100% repeat-x;
-    background: var(--webkit-mask);
+    width: 100%;
+    max-width: 484px;
+    margin: 0 auto
 }
+.back-button {
+    color: #626263;
+    max-width: 32px;
+    max-height: 32px;
+    cursor: pointer;
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+    margin-bottom: 22px;
+    outline: none;
+    border: none;
+    background-color: #f5f5f5;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+
+.details-title {
+    color: #000;
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin-top: 0;
+    margin-bottom: 16px
+}
+
+.details-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 16px;
+    background: #FFF;
+    border-radius: 16px;
+}
+
+.details-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 16px 0;
+    gap: 16px
+}
+
+.details-block:not(:last-child) {
+    border-bottom: 1px solid #CCC
+}
+
+.block-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.block-row {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between
+}
+
+.block-row strong{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ticket-details--info-block {
+  display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    gap: 4px;
+}
+.info-block {
+    color: #626263;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400
+}
+
+.info-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px
+}
+
+.info-description {
+    color: #000;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px
+}
+
+.main-info-description {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px
+}
+
+.logo-wrapper {
+    border-radius: 32px;
+    border: 1px solid #CCC;
+    background: #FFF;
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+    overflow: hidden
+}
+
+.info-logo {
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    --bg--crop: 1px;
+    background-position: -webkit-calc(-1 * var(--bg--crop)) -webkit-calc(-1 * var(--bg--crop));
+    background-position: calc(-1 * var(--bg--crop)) calc(-1 * var(--bg--crop));
+    background-size: -webkit-calc(100% + (var(--bg--crop) * 2));
+    background-size: calc(100% + (var(--bg--crop) * 2));
+    background-repeat: no-repeat
+}
+
+.plash-logo {
+    margin: 32px auto 0;
+    pointer-events: none;
+}
+
+
+.plash{
+  width: 293px;
+  height: auto;
+}
+
+
+
+.instruction-btn {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    color: gray;
+    cursor: pointer;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    box-sizing: border-box;
+    background: none;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    vertical-align: top;
+    min-height: 0;
+    min-width: 0;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}
+
+.instruction-btn svg {
+    min-width: 24px;
+    min-height: 24px
+}
+
+.instruction-btn:hover {
+    opacity: .7
+}
+
+
+
+
+
+.secure-wrapper {
+  display: flex;
+  width: calc(100% + 30px);
+  overflow: hidden;
+  height: 32px;
+  background: #111F23;
+  align-items: center;
+}
+
+
+.secure-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  gap: 8px;
+  color: #15c6bb
+}
+
+.secure-text {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  text-align: center;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: .28px;
+  white-space: nowrap;
+  -webkit-animation: runningLine 12s linear infinite;
+  animation: runningLine 12s linear infinite
+}
+
+@-webkit-keyframes runningLine {
+  0% {
+      -webkit-transform: translateX(0);
+      transform: translate(0)
+  }
+
+  to {
+      -webkit-transform: translateX(-100%);
+      transform: translate(-100%)
+  }
+}
+
 
 .dotted-line::before,
 .dotted-line::after {
@@ -190,22 +470,22 @@ transform: rotate(360deg);
 
 .top-cutout {
   position: absolute;
-  top: -57px;
+  top: -50px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  height: 80px;
+  width: 72px;
+  height: 72px;
   background-color: #f5f5f5;
   border-radius: 50%;
   z-index: 1;
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   position: absolute;
-  top: -46px;
+  top: -43px;
   left: calc(50% - 30px);
   background-color: white;
   z-index: 999;
@@ -217,10 +497,10 @@ transform: rotate(360deg);
 }
 
 .header {
-  font-weight: bold;
-  color: #333;
-  margin-top: 40px;
-  margin-bottom: 10px;
+  margin-top: 16.5px;
+  margin-bottom: 24px;
+  color: #000000;
+  font-family: Lato;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -230,35 +510,38 @@ transform: rotate(360deg);
   width: 40%;
   background-color: #ccc;
   height: 1px; 
-  margin: 30px auto 40px auto;
+  margin: 0 auto 24px auto;
 }
 
 .purchase-info {
-  margin-bottom: 20px;
-      color: gray;
-    font-family: Lato;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: -.021px
+  margin-bottom: 15.5px;
+  color: #626263;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -.021px
 }
 
 .ticket-info {
   color: #000;
-  margin: 10px auto 15px auto;
-    font-family: Lato;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 48px;
+  margin: 0 auto 14.7px auto;
+  font-family: Lato;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
 }
 
 #ticket-number {
   color: #000;
-  font-weight: bold;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 .timer-container {
-  margin: 15px auto 30px auto;
+  margin: 0 auto 28px auto;
   padding: 12px 18px;
   background: -webkit-linear-gradient(359deg,rgba(172,218,189,.5) 0%,rgba(170,212,248,.5) 100%),#FFF;
   background: linear-gradient(91deg,rgba(172,218,189,.5) 0%,rgba(170,212,248,.5) 100%),#FFF;
@@ -267,10 +550,10 @@ transform: rotate(360deg);
   align-items: center;
   position: relative;
   text-align: left;
-    font-family: Lato;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
 }
 
 #timerCircle {
@@ -287,46 +570,40 @@ transform: rotate(360deg);
 }
 
 .dotted-line {
-    width: 95%;
+    width: 100%;
     height: 1px;
     background-image: -webkit-gradient(linear,left top,right top,from(#CCC),color-stop(50%,#CCC),color-stop(50%,transparent),to(transparent));
     background-image: -webkit-linear-gradient(left,#CCC,#CCC 50%,transparent 50%,transparent 100%);
     background-image: linear-gradient(90deg,#CCC,#CCC 50%,transparent 50%,transparent 100%);
-    background-size: 20px 1px;
+    background-size: 20px 1px
 }
 
 .qr-code {
-  width: 230px;
-  height: 230px;
-  margin-top: 50px;
+  padding: 10px 5px;
+  width: 220px;
+  height: 220px;
+  margin-top: 40px;
   margin-bottom: 0;
   display: flex;
   z-index: 2;
   border-radius: 20px;
-pointer-events: none;
-box-shadow: 0 0 15px 10px rgba(238, 238, 238);
+  pointer-events: none;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, .1);
 }
 
 
 .footer {
+  font-family: Lato;
   position: relative;
   z-index: 2;
-	margin-top: 30px; 
-  color: gray;
+	margin-top: 25px; 
+  color: #626263;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
 }
 
-#waveCanvas {
-  position: absolute;
-  top: 680px; /* Начинаем от верхней части контейнера */
-  left: 0;
-  z-index: 3; /* Волна будет поверх контейнера билета */
-  pointer-events: none; /* Отключаем взаимодействие с canvas, чтобы не мешать кликам по другим элементам */
-  width: 100%; /* Сделаем ширину равной ширине контейнера */
-  height: 55px;
-}
+
 
 .reopen-message {
   font-size: 14px;
@@ -336,19 +613,16 @@ box-shadow: 0 0 15px 10px rgba(238, 238, 238);
   width: 100%;
   box-sizing: border-box;
   user-select:none;
-      color: gray;
-    text-align: center;
-    font-family: Lato;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
-    width: 240px;
-    -webkit-align-self: center;
-    align-self: center
+  color: #626263;
+  text-align: center;
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  width: 240px;
+  -webkit-align-self: center;
+  align-self: center
 }
-
-
-
 
 @media (max-width: 600px) {
   .ticket-wrapper {
@@ -356,23 +630,23 @@ box-shadow: 0 0 15px 10px rgba(238, 238, 238);
   }
 
   .ticket-container {
-    padding: 20px 15px 50px 15px;
+    padding: 32px 15px 50px 15px;
     max-width: 100%;
     box-sizing: border-box;
 	pointer-events: none;
   }
 
   .logo {
-    width: 60px;
-    height: 60px;
-    top: -46px;
+    width: 58px;
+    height: 58px;
+    top: -43px;
     transform: translateX(-50%);
     left: 50%;
 	pointer-events: none;
   }
 
   .header {
-        color: #000;
+    color: #000000;
     font-family: Lato;
     font-size: 16px;
     font-weight: 600;
@@ -397,7 +671,7 @@ box-shadow: 0 0 15px 10px rgba(238, 238, 238);
   background: -webkit-linear-gradient(359deg,rgba(172,218,189,.5) 0%,rgba(170,212,248,.5) 100%),#FFF;
   background: linear-gradient(91deg,rgba(172,218,189,.5) 0%,rgba(170,212,248,.5) 100%),#FFF;
   border-radius: 100px;
-  height: 40px;
+  height: 36px;
   font-family: Lato;
   font-size: 14px;
   font-weight: 400;
@@ -415,7 +689,7 @@ box-shadow: 0 0 15px 10px rgba(238, 238, 238);
     z-index: 1;
     margin: auto;
     margin-top: 16px;
-    color: gray;
+    color: #626263;
     text-align: center;
     font-family: Lato;
     font-size: 12px;
