@@ -76,8 +76,8 @@ function setColorByDay(){
             elem2.style.color = "rgba(11, 106, 153, 1)";
             break;
         case 4:
-            elem1.style.backgroundColor = "rgba(139, 64, 153, 0.1)";
-            elem2.style.color = "rgba(139, 64, 153, 1)";
+            elem1.style.backgroundColor = "rgba(11, 106, 153, 0.1)";
+            elem2.style.color = "rgba(11, 106, 153, 1)";
             break;
         case 5:
             elem1.style.backgroundColor = "rgba(139, 64, 153, 0.1)";
@@ -162,6 +162,7 @@ window.onload = function () {
     });
 
 };
+
 
 
 
